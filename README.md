@@ -16,7 +16,7 @@ This is a work in progress, and is mostly a means for me to document my current 
 ## Installation
 
   1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
-  2. [Install Ansible](http://docs.ansible.com/intro_installation.html).
+  2. [Install Ansible](http://docs.ansible.com/intro_installation.html).  `sudo pip install ansible` or `(curl -O https://bootstrap.pypa.io/get-pip.py; sudo python get-pip.py; sudo pip install ansible)`
   3. Clone this repository to your local drive.
   4. Run `$ ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
   5. Run `ansible-playbook main.yml -i inventory -K` inside this directory. Enter your account password when prompted.
@@ -65,49 +65,39 @@ Any variable can be overridden in `config.yml`; see the supporting roles' docume
 
 ## Included Applications / Configuration (Default)
 
-Applications (installed with Homebrew Cask):
+Applications (installed with Homebrew Cask) TODO: Update this list:
 
+  - [cheatsheet] (https://www.mediaatelier.com/CheatSheet/)
+  - [coconutbattery] (www.coconut-flavour.com)
   - [Docker](https://www.docker.com/)
   - [Dropbox](https://www.dropbox.com/)
+  - [filezilla] (https://filezilla-project.org/)
   - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
   - [Google Chrome](https://www.google.com/chrome/)
-  - [Handbrake](https://handbrake.fr/)
+  - [google-backup-and-sync] (https://www.google.com/drive/download/backup-and-sync/)
   - [Homebrew](http://brew.sh/)
-  - [LICEcap](http://www.cockos.com/licecap/)
-  - [LimeChat](http://limechat.net/mac/)
-  - [MacVim](http://macvim-dev.github.io/macvim/)
-  - [nvALT](http://brettterpstra.com/projects/nvalt/)
-  - [Sequel Pro](https://www.sequelpro.com/) (MySQL client)
-  - [Skitch](https://evernote.com/skitch/)
-  - [Slack](https://slack.com/)
-  - [Sublime Text](https://www.sublimetext.com/)
-  - [Transmit](https://panic.com/transmit/) (S/FTP client)
+  - [inkscape] (https://inkscape.org/)
+  - [itsycal] (https://www.mowglii.com/itsycal/)
+  - [keepassx] (https://www.keepassx.org/)
+  - [keka] (www.kekaosx.com/)
+  - [teamviewer] (https://www.teamviewer.us/)
   - [Vagrant](https://www.vagrantup.com/)
   - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+  - [virtualbox-extension-pack] (https://www.virtualbox.org/wiki/Downloads)
+  - [vlc] (https://www.videolan.org/vlc/index.html)
 
-Packages (installed with Homebrew):
+Packages (installed with Homebrew) TODO: Update this list:
 
-  - autoconf
   - bash-completion
-  - chromedriver
-  - doxygen
-  - gettext
-  - gifsicle
   - git
   - go
-  - gpg
   - hub
   - httpie
   - iperf
-  - libevent
-  - sqlite
-  - mcrypt
+  - monit
   - nmap
-  - node
-  - nvm
   - ssh-copy-id
   - cowsay
-  - readline
   - openssl
   - pv
   - wget
@@ -119,40 +109,36 @@ Finally, there are a few other preferences and settings added on for various app
 
 ## Future additions
 
+### TODO:
+
+  - [ ] Clean up code and update documentation
+  - [ ] Tweak OSX config
+  - [ ] Split installed software into different files (core/suggested/personal)
+  - [ ] Add mack-up information
+  - [ ] Add suggested Atom/PHPStorm config/plugins
+  - [ ] Add suggested git config
+
 ### Things that still need to be done manually
 
 It's my hope that I can get the rest of these things wrapped up into Ansible playbooks soon, but for now, these steps need to be completed manually (assuming you already have Xcode and Ansible installed, and have run this playbook).
 
-  1. Set JJG-Term as the default Terminal theme (it's installed, but not set as default automatically).
-  2. Install [Sublime Package Manager](http://sublime.wbond.net/installation).
-  3. Install all the apps that aren't yet in this setup (see below).
-  4. Remap Caps Lock to Escape (requires macOS Sierra 10.12.1+).
-  5. Set trackpad tracking rate.
-  6. Set mouse tracking rate.
-  7. Configure extra Mail and/or Calendar accounts (e.g. Google, Exchange, etc.).
+  1. Install [Sublime Package Manager](http://sublime.wbond.net/installation).
+  2. Install all the apps that aren't yet in this setup (see below).
+  3. Remap Caps Lock to Escape (requires macOS Sierra 10.12.1+).
+  4. Set trackpad tracking rate.
+  5. Set mouse tracking rate.
+  6. Configure extra Mail and/or Calendar accounts (e.g. Google, Exchange, etc.).
 
 ### Applications/packages to be added:
 
 These are mostly direct download links, some are more difficult to install because of custom installers or other nonstandard install quirks:
 
-  - [iShowU HD](http://www.shinywhitebox.com/downloads/iShowU_HD_2.3.20.dmg)
-  - [Adobe Creative Cloud](http://www.adobe.com/creativecloud.html)
-
-### Configuration to be added:
-
-  - I have vim configuration in the repo, but I still need to add the actual installation:
-    ```
-    mkdir -p ~/.vim/autoload
-    mkdir -p ~/.vim/bundle
-    cd ~/.vim/autoload
-    curl https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim > pathogen.vim
-    cd ~/.vim/bundle
-    git clone git://github.com/scrooloose/nerdtree.git
-    ```
+  - Microsoft Office Suite
+  - OneNote
 
 ## Testing the Playbook
 
-Many people have asked me if I often wipe my entire workstation and start from scratch just to test changes to the playbook. Nope! Instead, I posted instructions for how I build a [Mac OS X VirtualBox VM](https://github.com/geerlingguy/mac-osx-virtualbox-vm), on which I can continually run and re-run this playbook to test changes and make sure things work correctly.
+Many people have asked me if I often wipe my entire workstation and start from scratch just to test changes to the playbook. Nope! Instead, Jeff Geerling posted instructions for how  build a [Mac OS X VirtualBox VM](https://github.com/geerlingguy/mac-osx-virtualbox-vm), on which I can continually run and re-run this playbook to test changes and make sure things work correctly.
 
 Additionally, this project is [continuously tested on Travis CI's macOS infrastructure](https://travis-ci.org/geerlingguy/mac-dev-playbook).
 
@@ -160,6 +146,56 @@ Additionally, this project is [continuously tested on Travis CI's macOS infrastr
 
 Check out [Ansible for DevOps](https://www.ansiblefordevops.com/), which teaches you how to automate almost anything with Ansible.
 
-## Author
+## New to Ansible?
+https://github.com/blacksaildivision/ansible-tutorial
 
+## Author
+Red Airship, 2017 (inspired by [Jeff Geerling](http://www.jeffgeerling.com/))
 [Jeff Geerling](http://www.jeffgeerling.com/), 2014 (originally inspired by [MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks)).
+
+## Dev information
+### GIT
+
+`git` by default doesn't have autocompletion on OS X.
+Super easy to [install it](https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion):
+
+```bash
+brew install bash-completion
+```
+
+Then add this line to your `~/.bash_profile`:
+
+```bash
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+```
+
+[RECOMMENDED] Use rebase for git merge, use this to set as global config:
+```bash
+git config --global pull.rebase true
+```
+
+Make sure your git pushes only the current branch.
+Run the following:
+
+```bash
+git config --global push.default simple
+```
+
+To have git user the OS X Keychain, run this command:
+
+```bash
+git config --global credential.helper osxkeychain
+```
+
+## References
+
+  - https://github.com/jonathanong/osx-webdev-setup
+  - https://github.com/donaldaverill/mac-dev-playbook/blob/master/config_template.yml
+  - https://github.com/taniarascia/mac
+  - https://gist.github.com/t-io/8255711
+  - https://blog.vandenbrand.org/2016/01/04/how-to-automate-your-mac-os-x-setup-with-ansible/
+  - https://github.com/galliangg/macos-setup/blob/master/playbook.yml
+  - https://github.com/JamesOBenson/mac-dev-playbook/blob/master/default.config.yml
+  - https://github.com/ricbra/mac-dev-playbook/blob/master/vars/main.yml
