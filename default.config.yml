@@ -24,6 +24,7 @@ homebrew_installed_packages:
   - chromedriver # WebDriver is an open source tool for automated testing of webapps across many browsers
   # - doxygen # Source code documentation and analysis tool
   # - docker # open platform for developers and sysadmins to build, ship, and run distributed applications
+  - DNSMasq # provides network infrastructure for small networks: DNS, DHCP, router advertisement and network boot
   # - gettext
   # - gifsicle # Gifsicle is a command-line tool for creating, editing, and getting information about GIF images and animations.
   - git
