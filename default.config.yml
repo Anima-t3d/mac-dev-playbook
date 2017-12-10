@@ -92,6 +92,7 @@ homebrew_cask_apps:
   # - vagrant
   # - virtualbox
   - filezilla
+  - harvest
   - sourcetree # GUI for GIT
   - spotify
   - spotify-notifications
