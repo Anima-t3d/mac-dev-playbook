@@ -114,7 +114,7 @@ Finally, there are a few other preferences and settings added on for various app
   - [ ] Clean up code and update documentation
   - [ ] Tweak OSX config
   - [ ] Split installed software into different files (core/suggested/personal)
-  - [ ] Add mack-up information
+  - [x] Add [Mackup](https://github.com/lra/mackup) information
   - [ ] Add suggested Atom/PHPStorm config/plugins
   - [ ] Add suggested git config
 
@@ -154,6 +154,48 @@ Red Airship, 2017 (inspired by [Jeff Geerling](http://www.jeffgeerling.com/))
 [Jeff Geerling](http://www.jeffgeerling.com/), 2014 (originally inspired by [MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks)).
 
 ## Dev information
+### Mackup
+If you have [Dropbox](https://www.dropbox.com) installed and want to use it to
+save your config files, that's super easy.
+
+On OS X, if you want an easy install, you can install
+[Homebrew](http://brew.sh/) and do:
+
+```bash
+# Install Mackup
+brew install mackup
+
+# Launch it and back up your files
+mackup backup
+```
+
+If not running OS X, or you don't like Homebrew, you can use [pip](https://pip.pypa.io/en/stable/).
+
+> Note: The below command will check if a previous version of Mackup
+> is already installed on your system.
+> If this is the case, it will be upgraded to the latest version.
+
+```bash
+# Install Mackup with PIP
+pip install --upgrade mackup
+
+# Launch it and back up your files
+mackup backup
+```
+
+You're all set and constantly backed up from now on.
+
+Next, on any new workstation, do:
+
+```bash
+# Install Mackup
+brew install mackup
+
+# Launch it and restore your files
+mackup restore
+```
+
+Done!
 ### GIT
 
 `git` by default doesn't have autocompletion on OS X.
