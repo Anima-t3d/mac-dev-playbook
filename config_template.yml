@@ -1,0 +1,206 @@
+---
+configure_dock_items: yes
+configure_dotfiles: yes
+configure_repositories: yes
+configure_sudoers: yes
+configure_prefs: yes
+configure_osx: yes
+configure_mas: yes
+configure_homebrew: yes
+configure_npm: yes
+configure_visual_studio_code_extensions: no
+
+homebrew_upgrade_all_packages: yes
+
+homebrew_installed_packages:
+  - ansible
+  - autoconf # extensible package of M4 macros that produce shell scripts to automatically configure software source code packages
+  - aria2 # lightweight multi-protocol & multi-source command-line download utility
+  - bash-completion # auto-complete git
+  - chromedriver # WebDriver is an open source tool for automated testing of webapps across many browsers
+  # - doxygen # Source code documentation and analysis tool
+  # - docker # open platform for developers and sysadmins to build, ship, and run distributed applications
+  - dockutil
+  - DNSMasq # provides network infrastructure for small networks: DNS, DHCP, router advertisement and network boot
+  # - gettext
+  # - gifsicle # Gifsicle is a command-line tool for creating, editing, and getting information about GIF images and animations.
+  - git
+  - go # Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
+  # - gpg
+  # - hub
+  # - httpie # CLI HTTP client, user-friendly curl replacement with intuitive UI, JSON support, syntax highlighting, wget-like downloads, extensions, etc.
+  # - iperf3 # A TCP, UDP, and SCTP network bandwidth measurement tool
+  # - libevent # an event notification library
+  # - sqlite # implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
+  - mongodb
+  # - mcrypt # allows developers to use a wide range of encryption functions
+  # - nmap # utility for network discovery and security auditing
+  - node # JavaScript runtime built on Chrome's V8 JavaScript engine
+  # - nvm # Node Version Manager - Simple bash script to manage multiple active node.js versions
+  - openssl
+  - python
+  - ssh-copy-id # OpenSSH is the premier connectivity tool for remote login with the SSH protocol
+  # - cowsay
+  # - readline # provides a set of functions for use by applications that allow users to edit command lines as they are typed in
+  # - pv # Pipe Viewer is an Open Source tool to monitor the progress of data through a pipeline between any two processes, giving a progress bar, ETA, etc.
+  - wget # package for retrieving files using HTTP, HTTPS and FTP
+  # - composer # Dependency Manager for PHP
+  # - docker-compose # Compose is a tool for defining and running multi-container Docker applications
+  # - docker-machine-nfs # Activates NFS on docker-machine
+  # - dockutil # command line tool for managing dock items
+  - git-extras # GIT utilities -- repo summary, repl, changelog population, author commit percentages and more
+  - mas # Mac App Store command line interface
+  # - mercurial # distributed source control management tool
+  - npm
+  # - phpmd
+  # - php-code-sniffer
+  # - php-cs-fixer
+  # - phpunit
+  # - php70
+  # - php70-intl
+  # - php70-imagick
+  # - php70-mcrypt
+  # - tmux # lets you switch easily between several programs in one terminal
+  - tree # recursive directory listing command that produces a depth indented listing of files
+  # - wrk # Modern HTTP benchmarking tool
+  - yarn
+  # - zsh # Zsh is a shell designed for interactive use, although it is also a powerful scripting language.
+
+
+homebrew_cask_apps:
+  - docker
+  - dropbox
+  # - fing # Download link keeps getting changed, d'oh!
+  - firefox
+  - google-chrome
+  # - handbrake
+  # - licecap
+  # - limechat
+  # - macvim
+  # - sequel-pro
+  # - skitch
+  - slack
+  # - sublime-text
+  # - transmit
+  # - vagrant
+  # - virtualbox
+  - filezilla
+  - harvest
+  - sourcetree # GUI for GIT
+  - spotify
+  - spotify-notifications
+  - atom # Free code editor
+  - phpstorm # Paid code editor
+  - google-backup-and-sync # Former google drive
+  - skype
+  - franz # free messaging app, that combines chat & messaging services into one application: https://meetfranz.com/
+  # - thunderbird # email client
+  - vlc # Video player
+  # - teamviewer
+  # - inkscape # vector software
+  # - gimp # pixel software
+  # - mamp # apache mysql php
+  - avast-security # Free anti-virus
+  - keka # archiver
+  - keepassx # password manager
+  # utilities
+  - alfred # Productivity application for Mac OS X, which boosts your efficiency with hotkeys, keywords and text expansion: https://www.alfredapp.com/
+  - cheatsheet # Just hold the ⌘-Key a bit longer to get a list of all active short cuts of the current application: https://www.mediaatelier.com/CheatSheet/
+  - coconutbattery # Shows you live information about the battery in your Mac and iOS device: http://www.coconut-flavour.com/coconutbattery/
+  - flux # Makes the color of your computer's display adapt to the time of day, warm at night and like sunlight during the day.
+  - easyfind # Improves search on mac
+  #- itsycal # Adds tiny menu bar calendar to clock: https://www.mowglii.com/itsycal/
+  - spectacle # Move and resize windows with ease
+
+
+dock_items_to_remove:
+  - App Store
+  - Calendar
+  - Contacts
+  - FaceTime
+  - iTunes
+  - iBooks
+  - Keynote
+  - Launchpad
+  - Mail
+  - Maps
+  - Messages
+  - Notes
+  - Numbers
+  - Pages
+  - Photos
+  - Reminders
+  - Safari
+  - Siri
+  - System Preferences
+
+dock_items_to_persist:
+  - name: Google Chrome
+    path: "/Applications/Google Chrome.app"
+    pos: 1
+  - name: Firefox
+    path: "/Applications/Firefox.app"
+    pos: 2
+  - name: Slack
+    path: "/Applications/Slack.app"
+    pos: 3
+  - name: SourceTree
+    path: "/Applications/SourceTree.app"
+    pos: 4
+  - name: Terminal
+    path: "/Applications/Utilities/Terminal.app"
+    pos: 5
+
+dotfiles_files:
+  - .aliases
+  - .bash_profile
+  - .bash_prompt
+  - .bashrc
+  - .curlrc
+  - .editorconfig
+  - .functions
+  - .gitattributes
+  - .gitconfig
+  - .gitignore
+  - .gitignore_global
+  - .hushlogin
+  - .inputrc
+  - .osx
+  - .screenrc
+  - .wgetrc
+
+mas_installed_apps:
+  - { id: 497799835, name: "Xcode" }
+  - { id: 1189824719, name: "Jayson - Visual JSON Editor" }
+
+npm_absent_globals: []
+
+npm_latest_globals:
+  - '@angular/cli'
+  - 'gulp-cli'
+
+repository_configs:
+  - { repo: 'git://github.com/Anima-t3d/mac-dev-playbook.git',
+      dest: '~/src/ansible/MacPlaybook' }
+  - { repo: 'git://github.com/Anima-t3d/dotfiles.git',
+      dest: '~/src/dotfiles' }
+
+visual_studio_code_extensions:
+  - alefragnani.bookmarks
+  - Angular.ng-template
+  - CoenraadS.bracket-pair-colorizer
+  - christian-kohler.npm-intellisense
+  - dbaeumer.vscode-eslint
+  - donjayamanne.githistory
+  - eamodio.gitlens
+  - EditorConfig.EditorConfig
+  - eg2.tslint
+  - eg2.vscode-npm-script
+  - haaaad.ansible
+  - IBM.output-colorizer
+  - ms-vscode.typescript-javascript-grammar
+  - msjsdiag.debugger-for-chrome
+  - natewallace.angular2-inline
+  - pflannery.vscode-versionlens
+  - robertohuertasm.vscode-icons
+  - WallabyJs.wallaby-vscode

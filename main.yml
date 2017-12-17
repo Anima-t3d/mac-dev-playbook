@@ -10,19 +10,30 @@
       with_fileglob:
         - ../config.yml
       tags: ['always']
+    - debug: var=mas_installed_apps
 
   roles:
     - role: geerlingguy.homebrew
+      when: configure_homebrew
       tags: ['homebrew']
     - role: geerlingguy.dotfiles
       when: configure_dotfiles
       tags: ['dotfiles']
+    - role: visual-studio-code-extensions
+      users:
+        - username: "{{ansible_user_id}}"
+          visual_studio_code_extensions: "{{ visual_studio_code_extensions }}"
+      when: configure_visual_studio_code_extensions
     - role: geerlingguy.mas
-      when: mas_installed_apps
+      when:
+        - mas_installed_apps
+        - configure_mas
       tags: ['mas']
 
   tasks:
     - include: tasks/ansible-setup.yml
+    - include: tasks/preferences.yml
+      when: configure_prefs
 
     - include: tasks/sudoers.yml
       when: configure_sudoers
@@ -36,9 +47,29 @@
 
     - include: tasks/extra-packages.yml
       tags: ['extra-packages']
+    - include: tasks/repositories.yml
+      when: configure_repositories
+
+    - include: tasks/npm.yml
+      when: configure_npm
+
+    - name: Remove all unwanted items from dock
+      shell: dockutil --remove "{{ item }}"
+      ignore_errors: true
+      with_items: "{{ dock_items_to_remove }}"
+      when: configure_dock_items
+
+    - name: Check if items in dock exist
+      shell: dockutil --find '{{ item.name }}' || dockutil --add '{{ item.path }}'
+      with_items: "{{ dock_items_to_persist }}"
+      when: configure_dock_items
 
     - name: Run configured post-provision ansible task files.
       include: "{{ outer_item }}"
       loop_control:
         loop_var: outer_item
       with_fileglob: "{{ post_provision_tasks|default(omit) }}"
+    - name: Fix order
+      shell: dockutil --move '{{ item.name }}' --position {{ item.pos }}
+      with_items: "{{ dock_items_to_persist }}"
+      when: configure_dock_items

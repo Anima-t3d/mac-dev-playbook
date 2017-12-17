@@ -15,6 +15,10 @@ This is a work in progress, and is mostly a means for me to document my current 
 
 ## Installation
 
+  1. open terminal and run `curl https://raw.githubusercontent.com/Anima-t3d/mac-dev-playbook/master/bootstrap_remote.sh | sh`
+
+  If that doesn't work, try below:
+
   1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
   2. [Install Ansible](http://docs.ansible.com/intro_installation.html).  `sudo pip install ansible` or `(curl -O https://bootstrap.pypa.io/get-pip.py; sudo python get-pip.py; sudo pip install ansible)`
   3. Clone this repository to your local drive.
