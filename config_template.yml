@@ -177,6 +177,10 @@ mas_installed_apps:
 
 osx_script: "~/.osx --no-restart"
 
+composer_packages: []
+gem_packages: []
+pip_packages: []
+
 npm_absent_globals: []
 
 npm_latest_globals:
