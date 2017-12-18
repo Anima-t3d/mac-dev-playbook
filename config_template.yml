@@ -147,9 +147,12 @@ dock_items_to_persist:
   - name: SourceTree
     path: "/Applications/SourceTree.app"
     pos: 4
+  - name: PhpStorm
+    path: "/Applications/PhpStorm.app"
+    pos: 5
   - name: Terminal
     path: "/Applications/Utilities/Terminal.app"
-    pos: 5
+    pos: 6
 
 dotfiles_files:
   - .aliases
