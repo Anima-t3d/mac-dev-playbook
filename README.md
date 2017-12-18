@@ -17,13 +17,12 @@ This is a work in progress, and is mostly a means for me to document my current 
 
   1. open terminal and run `curl https://raw.githubusercontent.com/Anima-t3d/mac-dev-playbook/master/bootstrap_remote.sh | sh`
 
-  If that doesn't work, try below:
+> There seems to be connection issues when installing the ansible roles, if the installation fails when it's downloading role's, please keep re-running the above command.
 
-  1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
-  2. [Install Ansible](http://docs.ansible.com/intro_installation.html).  `sudo pip install ansible` or `(curl -O https://bootstrap.pypa.io/get-pip.py; sudo python get-pip.py; sudo pip install ansible)`
-  3. Clone this repository to your local drive.
-  4. Run `$ ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
-  5. Run `ansible-playbook main.yml -i inventory -K` inside this directory. Enter your account password when prompted.
+  If the installation hangs after successfully downloading the roles, go to the tmp_laptop folder:
+
+  1. `cd ~/tmp_laptop/mac-dev-playbook`
+  2. Run `ansible-playbook main.yml -i inventory -K` inside this directory. Enter your account password when prompted.
 
 > Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
 
@@ -116,7 +115,7 @@ Finally, there are a few other preferences and settings added on for various app
 ### TODO:
 
   - [ ] Clean up code and update documentation
-  - [ ] Tweak OSX config
+  - [x] Tweak OSX config
   - [ ] Split installed software into different files (core/suggested/personal)
   - [x] Add [Mackup](https://github.com/lra/mackup) information
   - [ ] Add suggested Atom/PHPStorm config/plugins
@@ -126,19 +125,11 @@ Finally, there are a few other preferences and settings added on for various app
 
 It's my hope that I can get the rest of these things wrapped up into Ansible playbooks soon, but for now, these steps need to be completed manually (assuming you already have Xcode and Ansible installed, and have run this playbook).
 
-  1. Install [Sublime Package Manager](http://sublime.wbond.net/installation).
-  2. Install all the apps that aren't yet in this setup (see below).
-  3. Remap Caps Lock to Escape (requires macOS Sierra 10.12.1+).
-  4. Set trackpad tracking rate.
-  5. Set mouse tracking rate.
-  6. Configure extra Mail and/or Calendar accounts (e.g. Google, Exchange, etc.).
-
-### Applications/packages to be added:
-
-These are mostly direct download links, some are more difficult to install because of custom installers or other nonstandard install quirks:
-
-  - Microsoft Office Suite
-  - OneNote
+  1. Install all the apps that aren't yet in this setup (see below).
+  2. Setup SSH
+  3. Configure git?
+  4. Run Mackup
+  5. Configure extra Mail and/or Calendar accounts (e.g. Google, Exchange, etc.).
 
 ## Testing the Playbook
 
