@@ -171,7 +171,6 @@ dotfiles_files:
 
 mas_installed_apps:
   - { id: 497799835, name: "Xcode" }
-  - { id: 1189824719, name: "Jayson - Visual JSON Editor" }
 
 npm_absent_globals: []
 
