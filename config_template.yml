@@ -175,6 +175,8 @@ dotfiles_files:
 mas_installed_apps:
   - { id: 497799835, name: "Xcode" }
 
+osx_script: "~/.osx --no-restart"
+
 npm_absent_globals: []
 
 npm_latest_globals:
