@@ -88,23 +88,45 @@ Applications (installed with Homebrew Cask) TODO: Update this list:
   - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
   - [virtualbox-extension-pack] (https://www.virtualbox.org/wiki/Downloads)
   - [vlc] (https://www.videolan.org/vlc/index.html)
+  - harvest
+  - sourcetree # GUI for GIT
+  - spotify
+  - spotify-notifications
+  - phpstorm # Paid code editor
+  - google-backup-and-sync # Former google drive
+  - skype
+  - franz # free messaging app, that combines chat & messaging services into one application: https://meetfranz.com/
+  - avast-security # Free anti-virus
+  - alfred # Productivity application for Mac OS X, which boosts your efficiency with hotkeys, keywords and text expansion: https://www.alfredapp.com/
+  - flux # Makes the color of your computer's display adapt to the time of day, warm at night and like sunlight during the day.
+  - easyfind # Improves search on mac
+  - spectacle # Move and resize windows with ease
+  - slack
 
-Packages (installed with Homebrew) TODO: Update this list:
 
-  - bash-completion
+Packages (installed with Homebrew):
+  - ansible
+  - autoconf # extensible package of M4 macros that produce shell scripts to automatically configure software source code packages
+  - aria2 # lightweight multi-protocol & multi-source command-line download utility
+  - bash-completion # auto-complete git
+  - chromedriver # WebDriver is an open source tool for automated testing of webapps across many browsers
+  - docker # open platform for developers and sysadmins to build, ship, and run distributed applications
+  - dockutil
+  - DNSMasq # provides network infrastructure for small networks: DNS, DHCP, router advertisement and network boot
   - git
-  - go
-  - hub
-  - httpie
-  - iperf
-  - monit
-  - nmap
-  - ssh-copy-id
-  - cowsay
+  - go # Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
+  - mongodb
+  - node # JavaScript runtime built on Chrome's V8 JavaScript engine
   - openssl
-  - pv
-  - wget
-  - wrk
+  - python
+  - ssh-copy-id # OpenSSH is the premier connectivity tool for remote login with the SSH protocol
+  - wget # package for retrieving files using HTTP, HTTPS and FTP
+  - composer # Dependency Manager for PHP
+  - git-extras # GIT utilities -- repo summary, repl, changelog population, author commit percentages and more
+  - mas # Mac App Store command line interface
+  - npm
+  - tree # recursive directory listing command that produces a depth indented listing of files
+  - yarn
 
 My [dotfiles](https://github.com/geerlingguy/dotfiles) are also installed into the current user's home directory, including the `.osx` dotfile for configuring many aspects of macOS for better performance and ease of use. You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration.
 

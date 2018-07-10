@@ -19,7 +19,7 @@ homebrew_installed_packages:
   - bash-completion # auto-complete git
   - chromedriver # WebDriver is an open source tool for automated testing of webapps across many browsers
   # - doxygen # Source code documentation and analysis tool
-  # - docker # open platform for developers and sysadmins to build, ship, and run distributed applications
+  - docker # open platform for developers and sysadmins to build, ship, and run distributed applications
   - dockutil
   - DNSMasq # provides network infrastructure for small networks: DNS, DHCP, router advertisement and network boot
   # - gettext
@@ -44,7 +44,7 @@ homebrew_installed_packages:
   # - readline # provides a set of functions for use by applications that allow users to edit command lines as they are typed in
   # - pv # Pipe Viewer is an Open Source tool to monitor the progress of data through a pipeline between any two processes, giving a progress bar, ETA, etc.
   - wget # package for retrieving files using HTTP, HTTPS and FTP
-  # - composer # Dependency Manager for PHP
+  - composer # Dependency Manager for PHP
   # - docker-compose # Compose is a tool for defining and running multi-container Docker applications
   # - docker-machine-nfs # Activates NFS on docker-machine
   # - dockutil # command line tool for managing dock items
@@ -52,6 +52,7 @@ homebrew_installed_packages:
   - mas # Mac App Store command line interface
   # - mercurial # distributed source control management tool
   - npm
+  - php
   # - phpmd
   # - php-code-sniffer
   # - php-cs-fixer
@@ -70,7 +71,6 @@ homebrew_installed_packages:
 homebrew_cask_apps:
   - docker
   - dropbox
-  # - fing # Download link keeps getting changed, d'oh!
   - firefox
   - google-chrome
   # - handbrake
@@ -89,7 +89,7 @@ homebrew_cask_apps:
   - sourcetree # GUI for GIT
   - spotify
   - spotify-notifications
-  - atom # Free code editor
+  # - atom # Free code editor
   - phpstorm # Paid code editor
   - google-backup-and-sync # Former google drive
   - skype
