@@ -105,13 +105,24 @@ homebrew_cask_apps:
   - keepassx # password manager
   # utilities
   - alfred # Productivity application for Mac OS X, which boosts your efficiency with hotkeys, keywords and text expansion: https://www.alfredapp.com/
-  - cheatsheet # Just hold the ⌘-Key a bit longer to get a list of all active short cuts of the current application: https://www.mediaatelier.com/CheatSheet/
+  #- cheatsheet # Just hold the ⌘-Key a bit longer to get a list of all active short cuts of the current application: https://www.mediaatelier.com/CheatSheet/
   - coconutbattery # Shows you live information about the battery in your Mac and iOS device: http://www.coconut-flavour.com/coconutbattery/
-  - flux # Makes the color of your computer's display adapt to the time of day, warm at night and like sunlight during the day.
-  - easyfind # Improves search on mac
+  #- flux # Makes the color of your computer's display adapt to the time of day, warm at night and like sunlight during the day.
+  #- easyfind # Improves search on mac
   #- itsycal # Adds tiny menu bar calendar to clock: https://www.mowglii.com/itsycal/
   - spectacle # Move and resize windows with ease
-
+#  -- quicklook extension --
+  - qlcolorcode
+  - qlstephen
+  - qlmarkdown
+  - quicklook-json
+  - qlprettypatch
+  - quicklook-csv
+  - betterzip
+  - webpquicklook
+  - suspicious-package
+  - quicklookase
+  - qlvideo
 
 dock_items_to_remove:
   - App Store
@@ -185,7 +196,8 @@ npm_absent_globals: []
 
 npm_latest_globals:
   - '@angular/cli'
-  - 'gulp-cli'
+  #- 'gulp-cli'
+  - '@vue/cli'
 
 repository_configs:
   - { repo: 'git://github.com/Anima-t3d/mac-dev-playbook.git',
